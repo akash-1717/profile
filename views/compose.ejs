@@ -1,0 +1,28 @@
+<%- include("partials/header"); -%>
+
+<div class="container mainPadding myFont1">
+
+    <h1>Compose a new post</h1>
+    <hr class="divider">
+    <form class="" action="/compose" method="post">
+      <div class="form-group">
+        <label>Title</label>
+        <input class="form-control" type="text" name="postTitle" autocomplete="off" required>
+        <label>Date</label>
+        <input class="form-control" type="text" name="postDate" autocomplete="off"  placeholder="Ex. May 2019" required>
+        <label>Authors</label>
+        <input class="form-control" type="text" name="postAuthors" autocomplete="off"  placeholder="xyz, abc & pqr" required>
+        <label>External website link</label>
+        <input class="form-control" type="text" name="postLink" autocomplete="off"  placeholder="Link from google scholar or research gate" required>
+        <label>Post</label>
+        <textarea class="form-control" name="postBody" rows="5" cols="30" autocomplete="off"  required></textarea>
+        <label>Images</label>
+        <input class="form-control" type="file" name="imageUploaded" multiple>
+        <br>
+      </div>
+      <button class="newbtn1" type="submit" name="button">Post to home page</button>
+    </form>
+
+</div>
+
+<%- include("partials/footer"); -%>
