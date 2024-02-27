@@ -12,12 +12,13 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static("public"));
-// mysql -h sql6.freemysqlhosting.net -P 3306 -u sql6687180 -p
+
+// mysql -h manjunatha.cxucm6460fiy.eu-north-1.rds.amazonaws.com -u admin -p
 var db = mysql.createConnection({
-    host: "sql6.freemysqlhosting.net",
-    user: "sql6687180",
-    password: "SFnLJrzUHb",
-    database: "sql6687180",
+    host: "manjunatha.cxucm6460fiy.eu-north-1.rds.amazonaws.com",
+    user: "admin",
+    password: "manjunatha",
+    database: "manjunathadh",
     port: 3306
 });
 
@@ -40,12 +41,12 @@ db.connect(function (err) {
     } else {
         console.log("Database connected!");
 
-        db.query(`SELECT table_name FROM information_schema.tables WHERE table_schema = 'sql6687180';`, (err, tables) => {
+        db.query(`SELECT table_name FROM information_schema.tables WHERE table_schema = 'manjunathadh';`, (err, tables) => {
 
-
+            // console.log(tables);
             for (let i = 0; i < tables.length; i++) {
                 // console.log(tables[i]);
-                if (tables[i].table_name == "researcharticles") flag1 = 1;
+                if (tables[i].TABLE_NAME == "researcharticles") flag1 = 1;
             }
             if (!flag1) {
                 const sql = "CREATE TABLE researcharticles (id INT AUTO_INCREMENT PRIMARY KEY, title VARCHAR(200), journalname VARCHAR(200), yearyear VARCHAR(100), authors VARCHAR(200), doi VARCHAR(100), doilink VARCHAR(100));";
@@ -58,7 +59,7 @@ db.connect(function (err) {
             }
 
             for (let i = 0; i < tables.length; i++) {
-                if (tables[i].table_name == "awards") flag2 = 1;
+                if (tables[i].TABLE_NAME == "awards") flag2 = 1;
             }
             if (!flag2) {
                 const sql = "CREATE TABLE awards (id INT AUTO_INCREMENT PRIMARY KEY, descr VARCHAR(2000));";
@@ -71,7 +72,7 @@ db.connect(function (err) {
             }
 
             for (let i = 0; i < tables.length; i++) {
-                if (tables[i].table_name == "groupmembers") flag3 = 1;
+                if (tables[i].TABLE_NAME == "groupmembers") flag3 = 1;
             }
             if (!flag3) {
                 const sql = "CREATE TABLE groupmembers (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(200), course VARCHAR(200), topic VARCHAR(200), imagepath TEXT, imaghere LONGTEXT);";
@@ -84,7 +85,7 @@ db.connect(function (err) {
             }
 
             for (let i = 0; i < tables.length; i++) {
-                if (tables[i].table_name == "patents") flag4 = 1;
+                if (tables[i].TABLE_NAME == "patents") flag4 = 1;
             }
             if (!flag4) {
                 const sql = "CREATE TABLE patents (id INT AUTO_INCREMENT PRIMARY KEY, pno VARCHAR(50), gdate VARCHAR(10), name VARCHAR(100), contributors VARCHAR(200), descr VARCHAR(300));";
@@ -97,7 +98,7 @@ db.connect(function (err) {
             }
 
             for (let i = 0; i < tables.length; i++) {
-                if (tables[i].table_name == "reviewarticles") flag5 = 1;
+                if (tables[i].TABLE_NAME == "reviewarticles") flag5 = 1;
             }
             if (!flag5) {
                 const sql = "CREATE TABLE reviewarticles (id INT AUTO_INCREMENT PRIMARY KEY, title VARCHAR(200), journalname VARCHAR(200), yearyear VARCHAR(100), authors VARCHAR(200), doi VARCHAR(100), doilink VARCHAR(100));";
@@ -110,7 +111,7 @@ db.connect(function (err) {
             }
 
             for (let i = 0; i < tables.length; i++) {
-                if (tables[i].table_name == "books") flag6 = 1;
+                if (tables[i].TABLE_NAME == "books") flag6 = 1;
             }
             if (!flag6) {
                 const sql = "CREATE TABLE books (id INT AUTO_INCREMENT PRIMARY KEY, bname VARCHAR(200), year VARCHAR(200), isbn VARCHAR(100), authors VARCHAR(200), publisher VARCHAR(100));";
@@ -123,7 +124,7 @@ db.connect(function (err) {
             }
 
             for (let i = 0; i < tables.length; i++) {
-                if (tables[i].table_name == "bookchapters") flag7 = 1;
+                if (tables[i].TABLE_NAME == "bookchapters") flag7 = 1;
             }
             if (!flag7) {
                 const sql = "CREATE TABLE bookchapters (id INT AUTO_INCREMENT PRIMARY KEY, bookchapter VARCHAR(200), year VARCHAR(200), bookseries VARCHAR(200), volumename VARCHAR(200), volumenumber VARCHAR(200), pages VARCHAR(200), isbnseries VARCHAR(200), isbnvolume VARCHAR(200), editors VARCHAR(200), executiveeditor VARCHAR(200), publisher VARCHAR(200), authors VARCHAR(200));";
@@ -136,7 +137,7 @@ db.connect(function (err) {
             }
 
             for (let i = 0; i < tables.length; i++) {
-                if (tables[i].table_name == "invitedtalks") flag8 = 1;
+                if (tables[i].TABLE_NAME == "invitedtalks") flag8 = 1;
             }
             if (!flag8) {
                 const sql = "CREATE TABLE invitedtalks (id INT AUTO_INCREMENT PRIMARY KEY, topic VARCHAR(200), event VARCHAR(200), date VARCHAR(200));";
@@ -149,7 +150,7 @@ db.connect(function (err) {
             }
 
             for (let i = 0; i < tables.length; i++) {
-                if (tables[i].table_name == "membership") flag9 = 1;
+                if (tables[i].TABLE_NAME == "membership") flag9 = 1;
             }
             if (!flag9) {
                 const sql = "CREATE TABLE membership (id INT AUTO_INCREMENT PRIMARY KEY, orgname VARCHAR(200));";
@@ -162,7 +163,7 @@ db.connect(function (err) {
             }
 
             for (let i = 0; i < tables.length; i++) {
-                if (tables[i].table_name == "researchprojects") flag10 = 1;
+                if (tables[i].TABLE_NAME == "researchprojects") flag10 = 1;
             }
             if (!flag10) {
                 const sql = "CREATE TABLE researchprojects (id INT AUTO_INCREMENT PRIMARY KEY, title VARCHAR(200), amount VARCHAR(200), year VARCHAR(200), role VARCHAR(200), funding VARCHAR(200));";
@@ -175,7 +176,7 @@ db.connect(function (err) {
             }
 
             for (let i = 0; i < tables.length; i++) {
-                if (tables[i].table_name == "conference") flag11 = 1;
+                if (tables[i].TABLE_NAME == "conference") flag11 = 1;
             }
             if (!flag11) {
                 const sql = "CREATE TABLE conference (id INT AUTO_INCREMENT PRIMARY KEY, cname VARCHAR(200), paper VARCHAR(200));";
@@ -188,7 +189,7 @@ db.connect(function (err) {
             }
 
             for (let i = 0; i < tables.length; i++) {
-                if (tables[i].table_name == "alumni") flag12 = 1;
+                if (tables[i].TABLE_NAME == "alumni") flag12 = 1;
             }
             if (!flag12) {
                 const sql = "CREATE TABLE alumni (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(200), course VARCHAR(200), curpos VARCHAR(200), imagepath TEXT, imaghere LONGTEXT);";
