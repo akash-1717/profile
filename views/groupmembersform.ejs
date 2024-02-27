@@ -1,0 +1,27 @@
+<%- include("partials/header"); -%>
+
+<div class="form-container">
+  <form method="POST" action="/grpmembform" enctype="multipart/form-data" style="margin-top: 9rem;">
+    <div class="form-group">
+      <label for="title">Name</label>
+      <input type="text" id="" name="name" placeholder="Enter Name">
+    </div>
+    <div class="form-group">
+      <label for="title">Course</label>
+      <input type="text" id="" name="course" placeholder="Enter Course">
+    </div>
+    <div class="form-group">
+      <label for="title">Topic</label>
+      <input type="text" id="" name="topic" placeholder="Enter Topic">
+    </div>
+    <div class="form-group">
+      <label for="title">Image</label>
+      <input type="file" id="" name="imageimage">
+    </div>
+    <div class="form-group">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+
+<%- include("partials/footer"); -%>

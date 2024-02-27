@@ -1,0 +1,36 @@
+<%- include("partials/header"); -%>
+
+<div class="form-container">
+  <form method="POST" style="margin-top: 9rem;">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" placeholder="Enter title">
+    </div>
+    <div class="form-group">
+      <label for="journal">Journal Name</label>
+      <input type="text" id="journal" name="journal" placeholder="Enter journal name">
+    </div>
+    <div class="form-group">
+      <label for="year">Year</label>
+      <input type="text" id="year" name="year" placeholder="Enter year">
+    </div>
+    <div class="form-group">
+      <label for="authors">Authors</label>
+      <input type="text" id="authors" name="authors" placeholder="Enter authors">
+    </div>
+    <div class="form-group">
+      <label for="doi">DOI</label>
+      <input type="text" id="doi" name="doi" placeholder="Enter DOI">
+    </div>
+    <div class="form-group">
+      <label for="doiLink">DOI Link</label>
+      <input type="text" id="doiLink" name="doilink" placeholder="Enter DOI link">
+    </div>
+    <div class="form-group">
+      <input type="submit" formaction="/resartform" value="Submit as Research Article">
+      <input type="submit" formaction="/revartform" value="Submit as Review Article">
+    </div>
+  </form>
+</div>
+
+<%- include("partials/footer"); -%>

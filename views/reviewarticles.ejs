@@ -5,60 +5,24 @@
   <h1>Review articles</h1>
   <hr class="divider">
 
-  <div class="row mb-2">
-    <div class="col-md-12">
-      <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
-        <div class="col p-4 d-flex flex-column position-static">
-            <h5 class="mb-0 thisColor myFont1">A Mini Review on COVID-19 Assays.</h5>
-            <strong class="d-inline-block mb-2 thisColor1">Manjunatha D H</strong>
-            <strong class="d-inline-block mb-2 thisColor1">Karnatak University Journal of Science (ISSN: 0075-5168) <br> 2020, 51, 70-78</strong>
-          <br>
-          
-        </div>
-      </div>
-    </div>
-  </div>
+  
 
   <div class="row mb-2">
+    <% for (let i = 0; i < data.length; i++) { %>
     <div class="col-md-12">
-      <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
-        <div class="col p-4 d-flex flex-column position-static">
-            <h5 class="mb-0 thisColor myFont1">Advancement of sensitive sniffer bee technology. </h5>
-            <strong class="d-inline-block mb-2 thisColor1">Manjunatha D. H, Chua L. Suan. </strong>
-            <strong class="d-inline-block mb-2 thisColor1">Trends in Analytical Chemistry (ISSN: 01659936) <br> 2017, 97, 153-158. </strong>
-          <br>
-          <div class="mb-1 text-muted">DOI: 10.1016/j.trac.2017.09.006 <br> IF: 12.30</div>
+        <div class="row g-0 project border overflow-auto flex-md-row mb-4 shadow-lg position-relative publications">
+            <div class="col p-4 d-flex flex-column position-static">
+                <h5 class="mb-0 thisColor myFont1"><%= data[i].title %></h5>
+                <div class="mb-1 text-muted"><%= data[i].authors %></div>
+                <strong class="d-inline-block mb-2 thisColor1"><%= data[i].journalname %></strong>
+                <strong class="d-inline-block mb-2 thisColor1"><%= data[i].yearyear %></strong>
+                <div class="mb-1 text-dark">
+                    DOI: <u><a class="hrefTag1" href="<%= data[i].doilink %>"><%= data[i].doi %></a></u>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-
-  <div class="row mb-2">
-    <div class="col-md-12">
-      <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
-        <div class="col p-4 d-flex flex-column position-static">
-            <h5 class="mb-0 thisColor myFont1">The antiinflammatory and wound healing properties of honey. </h5>
-            <strong class="d-inline-block mb-2 thisColor1">Manjunatha D. H, Chua L. Suan. </strong>
-            <strong class="d-inline-block mb-2 thisColor1">Europen Food Research and Technology (ISSN: 1438-2377) <br>2014, 239(6), 1003–1014. </strong>
-          <br>
-          <div class="mb-1 text-muted">DOI: 10.1007/s00217-014-2297-6.<br> IF: 3.00</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-2">
-    <div class="col-md-12">
-      <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
-        <div class="col p-4 d-flex flex-column position-static">
-            <h5 class="mb-0 thisColor myFont1">Nanomaterials for Forensic Applications: A Review. </h5>
-            <strong class="d-inline-block mb-2 thisColor1">H.J. Amith Yadav, B. Eraiah, M.N. Kalasad, Manjunatha D Hadagali </strong>
-            <strong class="d-inline-block mb-2 thisColor1">International Journal of Materials, Manufacturing and Sustainable Technologies (IJMMST) 2022, 1(1), 4-11.</strong>
-          <br>
-          <div class="mb-1 text-muted">DOI: https://doi.org/10.56896/IJMMST.2022.1.1.002 </div>
-        </div>
-      </div>
-    </div>
+    <% } %>
   </div>
 
 </div>

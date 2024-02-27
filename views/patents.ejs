@@ -5,38 +5,25 @@
   <h1>Patents</h1>
   <hr class="divider">
 
-  <div class="row mb-2">
-    <div class="col-md-12">
-      <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 thisColor1">Patent no.: 398977</strong>
-          <strong class="d-inline-block mb-2 thisColor1">Granted date: 29 Nov 2021</strong>
-          <h5 class="mb-0 thisColor myFont1">Indian Patent</h5>
-          <br>
-          <div class="mb-1 text-muted">Contributors: Vinayak Adimule, Basappa C Yallur, Sheetal R Batakurki, Malathi Challa, Manjunatha D. H, Ravi Sankannavar, Gangadhar Bagihalli, Santosh S Nandi.</div>
-          <div class="mb-1 text-dark">
-            A process for synthesis of GDXSRO:CDO nanostructures. 
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  
 
   <div class="row mb-2">
+    <% for (let i = 0; i < data.length; i++) { %>
     <div class="col-md-12">
       <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 thisColor1">Patent no.: 2021104485</strong>
-          <strong class="d-inline-block mb-2 thisColor1">Granted date: 25 May 2022</strong>
-          <h5 class="mb-0 thisColor myFont1">Australian Patent</h5>
+          <strong class="d-inline-block mb-2 thisColor1">Patent no.: <%= data[i].pno %></strong>
+          <strong class="d-inline-block mb-2 thisColor1">Granted date: <%= data[i].gdate %></strong>
+          <h5 class="mb-0 thisColor myFont1"><%= data[i].name %></h5>
           <br>
-          <div class="mb-1 text-muted">Contributors: Vinayak Adimule, Basappa C Yallur, Sheetal R Batakurki, Malathi Challa, Manjunatha D. H, Ravi Sankannavar, Rajeev Joshi, Pallav Gupta, Santosh S Nandi.</div>
+          <div class="mb-1 text-muted">Contributors: <%= data[i].contributors %></div>
           <div class="mb-1 text-dark">
-            A process for synthesis of chromium doped tellurium dioxide nanostructures for EGFET pH sensor application. 
+            <%= data[i].descr %>
           </div>
         </div>
       </div>
     </div>
+    <% } %>
   </div>
 
 </div>

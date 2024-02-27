@@ -5,104 +5,19 @@
   <h1>Conferences/symposium</h1>
   <hr class="divider">
 
-  <div class="row mb-2">
-    <div class="col-md-12">
-      <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
-        <div class="col p-4 d-flex flex-column position-static">
-          <h5 class="mb-0 thisColor myFont1">International Conference on Applied Research in Engineering Sciences (ICARES - 2022), organized by Department of Physics, Chemistry, Mathematics and Humanities, Ramaiah Institute of Technology, Bengaluru, Karnataka, India, during 24th -25th  November, 2022 </h5> <br>
-            <strong class="d-inline-block mb-2 thisColor1">Paper Presented: Stability Indicating RP-HPLC Method Development and Validation for the Determination of Potential Anti-Diabetic Drug in Pure and Pharmaceutical Dosage Form, Nandeesha I. M., Nagalakshmi G, Basappa C. Yallur, Manjunatha D. H.* (Proceeding oral poster no 0219). </strong>
-        </div>
-      </div>
-    </div>
-  </div>
+  
 
   <div class="row mb-2">
+    <% for (let i = 0; i < data.length; i++) { %>
     <div class="col-md-12">
       <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
         <div class="col p-4 d-flex flex-column position-static">
-          <h5 class="mb-0 thisColor myFont1">International Conference on Advanced Materials Science and Applications (ICAMSA-2020), organized by Department of Physics, Ramaiah Institute of Technology, Bengaluru, Karnataka, India, during 3rd-4th September, 2020  </h5> <br>
-            <strong class="d-inline-block mb-2 thisColor1">Paper Presented: Recent Advances in Metal Oxide Nanocrystals, by B.Saraswathi1, Vismitha S. Patil, S. V. Halse, D. H.Manjunath and M. N. Kalasad (Proceeding p no 167). </strong>
+          <h5 class="mb-0 thisColor myFont1"><%= data[i].cname %></h5> <br>
+            <strong class="d-inline-block mb-2 thisColor1">Paper Presented: <%= data[i].paper %></strong>
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="row mb-2">
-    <div class="col-md-12">
-      <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
-        <div class="col p-4 d-flex flex-column position-static">
-          <h5 class="mb-0 thisColor myFont1">1st International Conference on Life, Chemical, and Health Sciences (CLCHS-2019). Organised by Department of Life Sciences, Ramaiah College of Arts, Science and Commerce (RCASC), In-collaboration with Departmnent of IT, BT, and S&T, Karnataka Science and Technology Academy (KSTA) Government of Karnataka, India (24th – 26th October 2019).</h5> <br>
-            <strong class="d-inline-block mb-2 thisColor1">Paper presented: Extractive spectrophotometric method for the determination of Oseltamivir Phosphate, Acyclovir and Famciclovir in pure and pharmaceutical formulations by Nandeesha IM, Basappa C Yallura, Manjunatha D. Hadagali. (Proceeding p no 59).</strong> <br>
-            <strong class="d-inline-block mb-2 thisColor1">ISBN (Proceedings Book): 978-81-927564-3-1</strong>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-2">
-    <div class="col-md-12">
-      <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
-        <div class="col p-4 d-flex flex-column position-static">
-          <h5 class="mb-0 thisColor myFont1">International symposium on Developing Drugs for Tomorrow (Challenges and Opportunities). Adichunchanagiri Institute for Molecular Medicine, (AIMS), BG Nagara, Karnataka (1st & 2nd January, 2018).</h5> <br>
-            <strong class="d-inline-block mb-2 thisColor1">Paper presented: Method  development  and  validation  for simultaneous determination of terbutaline sulphate, ambroxol HCl, guaifensin in pure and dosage form by RP-HPLC method by Nandeesh IM, Manjunatha DH.</strong> <br>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-2">
-    <div class="col-md-12">
-      <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
-        <div class="col p-4 d-flex flex-column position-static">
-          <h5 class="mb-0 thisColor myFont1">National Seminar on Scenario of Research and Business Oppertunities in Medicinal and Aromatic Plants. Kuvempu University, Shimoga. Karantaka. (29th -31st December, 2003).</h5> <br>
-            <strong class="d-inline-block mb-2 thisColor1">Paper presented: Antimicrobial activity of Cleome viscose Linn.</strong> <br>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-2">
-    <div class="col-md-12">
-      <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
-        <div class="col p-4 d-flex flex-column position-static">
-          <h5 class="mb-0 thisColor myFont1">Emerging Trends and New Vistas in Chemistry (EMTIC-2005) Calicut University, Calicut, Kerala. (29th- 30th November, 2005). </h5> <br>
-            <strong class="d-inline-block mb-2 thisColor1">Emerging Trends and New Vistas in Chemistry (EMTIC-2005) Calicut University, Calicut, Kerala. (29th- 30th November, 2005). </strong> <br>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-2">
-    <div class="col-md-12">
-      <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
-        <div class="col p-4 d-flex flex-column position-static">
-          <h5 class="mb-0 thisColor myFont1">2nd International Symposium on Drug Discovery and Process Research (DDPR-2006) Jawaharlal Nehru Medical College, KLE Society, Belgaum, Karnataka. (10th-12th February, 2006). </h5> <br>
-            <strong class="d-inline-block mb-2 thisColor1">Paper presented: Sensitive spectrophotometric method for the determination of indomethacin in capsules</strong> <br>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-2">
-    <div class="col-md-12">
-      <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
-        <div class="col p-4 d-flex flex-column position-static">
-          <h5 class="mb-0 thisColor myFont1">National conference in Chemistry (NCC-2006) Central College, Bangalore University, Bangalore, Karnataka.    (27th – 29th September, 2006) </h5> <br>
-            <strong class="d-inline-block mb-2 thisColor1">Paper presented: High-performance liquid chromatographic determination of deflazocort in pharmaceutical formulations and human plasma</strong> <br>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-2">
-    <div class="col-md-12">
-      <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
-        <div class="col p-4 d-flex flex-column position-static">
-          <h5 class="mb-0 thisColor myFont1">National conference on emerging areas in chemical and biological sciences (NCEACB-2007) Kuvempu University, Shimoga. Karantaka. (23rd-24thMarch, 2007). </h5> <br>
-            <strong class="d-inline-block mb-2 thisColor1">Paper presented: High-performance liquid chromatographic method for the assay of metaprolol succinate in pharmaceutical formulations and human plasma.</strong> <br>
-        </div>
-      </div>
-    </div>
+    <% } %>
   </div>
 
 </div>

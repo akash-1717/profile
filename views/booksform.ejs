@@ -1,0 +1,31 @@
+<%- include("partials/header"); -%>
+
+<div class="form-container">
+  <form method="POST" action="/booksform" style="margin-top: 9rem;">
+    <div class="form-group">
+      <label for="title">Book name</label>
+      <input type="text" id="" name="bname" placeholder="Enter book name">
+    </div>
+    <div class="form-group">
+      <label for="journal">Year of publication</label>
+      <input type="text" id="" name="yryr" placeholder="Enter year">
+    </div>
+    <div class="form-group">
+      <label for="year">ISBN</label>
+      <input type="text" id="" name="isbn" placeholder="Enter ISBN">
+    </div>
+    <div class="form-group">
+      <label for="authors">Authors</label>
+      <input type="text" id="" name="authors" placeholder="Enter authors">
+    </div>
+    <div class="form-group">
+      <label for="doi">Publisher</label>
+      <input type="text" id="" name="publisher" placeholder="Enter publishers">
+    </div>
+    <div class="form-group">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+
+<%- include("partials/footer"); -%>

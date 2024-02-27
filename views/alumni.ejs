@@ -14,12 +14,14 @@
       </tr>
     </thead>
     <tbody>
+        <% for (let i = 0; i < data.length; i++) { %>
         <tr>
-            <td>Nandeesh I M</td>
-            <td>Ph.D</td>
-            <td>Karnataka Antibiotics and Pharmaceutical Limited, Bangalore.</td>
-            <td><img src="images/alumni.jpeg" alt="" width="200"></td>
+          <td><%= data[i].name %></td>
+          <td><%= data[i].course %></td>
+          <td><%= data[i].curpos %></td>
+          <td><img src="data:image/png;base64,<%=data[i].imaghere%>" alt="" width="200"></td>
         </tr>
+        <% } %>
     </tbody>
   </table>
 

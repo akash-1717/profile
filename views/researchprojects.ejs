@@ -5,20 +5,23 @@
   <h1>Research projects</h1>
   <hr class="divider">
 
+  
+
   <div class="row mb-2">
+    <% for (let i = 0; i < data.length; i++) { %>
     <div class="col-md-12">
       <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
         <div class="col p-4 d-flex flex-column position-static">
-            <h5 class="mb-0 thisColor myFont1">UGC Start-up Grant.</h5>
+            <h5 class="mb-0 thisColor myFont1">Title of the project: <%= data[i].title %></h5>
             <br>
-            <h5 class="mb-0 thisColor myFont1">Title of the project: Studies on the interactions between bioactive nanoparticles and serum albumins by spectroscopic and molecular docking studies.</h5>
-            <br>
-            <strong class="d-inline-block mb-2 thisColor1">Amount Sanctioned: INR 10 lakhs</strong>
-            <strong class="d-inline-block mb-2 thisColor1">Year of Sanction: 2021</strong>
-            <strong class="d-inline-block mb-2 thisColor1">Role: Principal Investigator.</strong>
+            <strong class="d-inline-block mb-2 thisColor1">Amount Sanctioned: <%= data[i].amount %></strong>
+            <strong class="d-inline-block mb-2 thisColor1">Year of Sanction: <%= data[i].year %></strong>
+            <strong class="d-inline-block mb-2 thisColor1">Role: <%= data[i].role %></strong>
+            <strong class="d-inline-block mb-2 thisColor1">Funding Agency: <%= data[i].funding %></strong>
         </div>
       </div>
     </div>
+    <% } %>
   </div>
 
 </div>

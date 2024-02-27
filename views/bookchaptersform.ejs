@@ -1,0 +1,59 @@
+<%- include("partials/header"); -%>
+
+<div class="form-container">
+  <form method="POST" action="/bookchaptersform" style="margin-top: 9rem;">
+    <div class="form-group">
+      <label for="bookchapter">Book Chapter</label>
+      <input type="text" id="bookchapter" name="bookchapter" placeholder="Enter book chapter">
+    </div>
+    <div class="form-group">
+      <label for="year">Year</label>
+      <input type="text" id="year" name="year" placeholder="Enter year">
+    </div>
+    <div class="form-group">
+      <label for="bookseries">Book Series</label>
+      <input type="text" id="bookseries" name="bookseries" placeholder="Enter book series">
+    </div>
+    <div class="form-group">
+      <label for="volumename">Volume Name</label>
+      <input type="text" id="volumename" name="volumename" placeholder="Enter volume name">
+    </div>
+    <div class="form-group">
+      <label for="volumenumber">Volume Number</label>
+      <input type="text" id="volumenumber" name="volumenumber" placeholder="Enter volume number">
+    </div>
+    <div class="form-group">
+      <label for="pages">Pages</label>
+      <input type="text" id="pages" name="pages" placeholder="Enter pages">
+    </div>
+    <div class="form-group">
+      <label for="isbnseries">ISBN of Series</label>
+      <input type="text" id="isbnseries" name="isbnseries" placeholder="Enter ISBN of series">
+    </div>
+    <div class="form-group">
+      <label for="isbnvolume">ISBN of Volume</label>
+      <input type="text" id="isbnvolume" name="isbnvolume" placeholder="Enter ISBN of volume">
+    </div>
+    <div class="form-group">
+      <label for="editors">Editors of Volume</label>
+      <input type="text" id="editors" name="editors" placeholder="Enter editors">
+    </div>
+    <div class="form-group">
+      <label for="executiveeditor">Executive Editor</label>
+      <input type="text" id="executiveeditor" name="executiveeditor" placeholder="Enter executive editor">
+    </div>
+    <div class="form-group">
+      <label for="publisher">Publisher</label>
+      <input type="text" id="publisher" name="publisher" placeholder="Enter publisher">
+    </div>
+    <div class="form-group">
+      <label for="authors">Authors</label>
+      <input type="text" id="authors" name="authors" placeholder="Enter authors">
+    </div>
+    <div class="form-group">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+
+<%- include("partials/footer"); -%>
