@@ -403,3 +403,22 @@ h4, h3, h2 {
 .custom-list li a:hover {
     color: #645CAA; 
 }
+
+.image-container {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 0%;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flexflexdisp {
+  display: flex;
+  justify-content: space-between;
+}
+

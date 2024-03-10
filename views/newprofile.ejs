@@ -4,12 +4,19 @@
   <form method="POST" action="/newprofile" enctype="multipart/form-data" style="margin-top: 9rem;">
     <div class="form-group">
       <label for="title">Image</label>
-      <input type="file" id="" name="profilepicture">
+      <input type="file" id="profilepicture" name="profilepicture">
+    </div>
+    <div class="form-group">
+      <label for="image-shape">Do you want a circular image or a square image?</label><br>
+      <input type="radio" id="circle" name="imageshape" value="circle"> <span>Circle</span>
+      <br />
+      <input type="radio" id="square" name="imageshape" value="square" style="margin-top: 1rem;"> <span>Square</span>
     </div>
     <div class="form-group">
       <input type="submit" value="Submit">
     </div>
   </form>
 </div>
+
 
 <%- include("partials/footer"); -%>

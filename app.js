@@ -206,7 +206,7 @@ db.connect(function (err) {
                 if (tables[i].TABLE_NAME == "profilepictures") flag13 = 1;
             }
             if (!flag13) {
-                const sql = "CREATE TABLE profilepictures (id INT AUTO_INCREMENT PRIMARY KEY, imaghere LONGTEXT);";
+                const sql = "CREATE TABLE profilepictures (id INT AUTO_INCREMENT PRIMARY KEY, shape varchar(20), imaghere LONGTEXT);";
                 db.query(sql, (err, result) => {
                     if (err) console.log(err);
                     else {
@@ -221,7 +221,6 @@ db.connect(function (err) {
 });
 
 const upload = multer({storage:multer.memoryStorage()});
-
 
 app.get("/", (req, res) => {
     const sql = "SELECT * FROM profilepictures;";
@@ -685,10 +684,13 @@ app.get("/newprofile", (req, res) => {
     res.render("newprofile");
 });
 
+let shapes = ""
+
 app.post("/newprofile", upload.single("profilepicture"), (req, res) => {
     const image = req.file.buffer.toString('base64');
-    const sql = "INSERT INTO profilepictures(imaghere) VALUES (?);";
-    db.query(sql, [image], (err, result, fields) => {
+    let radioans = req.body.imageshape;
+    const sql = "INSERT INTO profilepictures(shape, imaghere) VALUES (?,?);";
+    db.query(sql, [radioans, image], (err, result, fields) => {
         if(err) console.log(err);
         else {
             console.log("added new profile picture to database");
