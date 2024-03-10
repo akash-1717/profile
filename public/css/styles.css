@@ -186,7 +186,7 @@ li .dropdown-item:hover {
     border: none;
     font-size: 1.25rem;
     padding-left: 0;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .myFixedHeader {

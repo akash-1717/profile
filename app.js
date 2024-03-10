@@ -34,6 +34,7 @@ let flag9 = 0;
 let flag10 = 0;
 let flag11 = 0;
 let flag12 = 0;
+let flag13 = 0;
 
 db.connect(function (err) {
     if (err) {
@@ -201,6 +202,19 @@ db.connect(function (err) {
                 });
             }
 
+            for (let i = 0; i < tables.length; i++) {
+                if (tables[i].TABLE_NAME == "profilepictures") flag13 = 1;
+            }
+            if (!flag13) {
+                const sql = "CREATE TABLE profilepictures (id INT AUTO_INCREMENT PRIMARY KEY, imaghere LONGTEXT);";
+                db.query(sql, (err, result) => {
+                    if (err) console.log(err);
+                    else {
+                        console.log("PROFILEPICTURES created");
+                    }
+                });
+            }
+
 
         });
     }
@@ -210,11 +224,25 @@ const upload = multer({storage:multer.memoryStorage()});
 
 
 app.get("/", (req, res) => {
-    res.render("home");
+    const sql = "SELECT * FROM profilepictures;";
+    db.query(sql, (err, result) => {
+        if (err) console.log(err);
+        else {
+            console.log("rendering successful");
+        }
+        res.render("home", { data: result[result.length-1] });
+    })
 });
 
 app.get("/about", (req, res) => {
-    res.render("about");
+    const sql = "SELECT * FROM profilepictures;";
+    db.query(sql, (err, result) => {
+        if (err) console.log(err);
+        else {
+            console.log("successfully fetched profile pictures from database!");
+        }
+        res.render("about", { data: result[result.length-1] });
+    })
 });
 
 app.get("/contact", (req, res) => {
@@ -652,6 +680,22 @@ app.post("/conferenceform", (req, res) => {
         }
     })
 })
+
+app.get("/newprofile", (req, res) => {
+    res.render("newprofile");
+});
+
+app.post("/newprofile", upload.single("profilepicture"), (req, res) => {
+    const image = req.file.buffer.toString('base64');
+    const sql = "INSERT INTO profilepictures(imaghere) VALUES (?);";
+    db.query(sql, [image], (err, result, fields) => {
+        if(err) console.log(err);
+        else {
+            console.log("added new profile picture to database");
+            res.redirect("/")
+        }
+    });
+});
 
 let port = process.env.PORT;
 if (port == null || port == "") {
