@@ -76,7 +76,7 @@ db.connect(function (err) {
                 if (tables[i].TABLE_NAME == "groupmembers") flag3 = 1;
             }
             if (!flag3) {
-                const sql = "CREATE TABLE groupmembers (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(200), course VARCHAR(200), topic VARCHAR(200), imagepath TEXT, imaghere LONGTEXT);";
+                const sql = "CREATE TABLE groupmembers (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(200), course VARCHAR(200), topic VARCHAR(200), imagepath TEXT, imaghere LONGTEXT, contact VARCHAR(200));";
                 db.query(sql, (err, result) => {
                     if (err) console.log(err);
                     else {
@@ -193,7 +193,7 @@ db.connect(function (err) {
                 if (tables[i].TABLE_NAME == "alumni") flag12 = 1;
             }
             if (!flag12) {
-                const sql = "CREATE TABLE alumni (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(200), course VARCHAR(200), curpos VARCHAR(200), imagepath TEXT, imaghere LONGTEXT);";
+                const sql = "CREATE TABLE alumni (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(200), course VARCHAR(200), curpos VARCHAR(200), imagepath TEXT, imaghere LONGTEXT, contact VARCHAR(200));";
                 db.query(sql, (err, result) => {
                     if (err) console.log(err);
                     else {
@@ -539,8 +539,9 @@ app.post("/grpmembform", upload.single("imageimage"), (req, res) => {
     const topic = req.body.topic;
     const course = req.body.course;
     const image = req.file.buffer.toString('base64');
-    const sql = "INSERT INTO groupmembers(name, course, topic, imaghere) VALUES (?,?,?,?);";
-    db.query(sql, [name, course, topic, image], (err, result, fields) => {
+    const contact = req.body.contact;
+    const sql = "INSERT INTO groupmembers(name, course, topic, imaghere, contact) VALUES (?,?,?,?,?);";
+    db.query(sql, [name, course, topic, image, contact], (err, result, fields) => {
         if(err) console.log(err);
         else {
             console.log("added groupmember to database");
@@ -558,8 +559,9 @@ app.post("/alumniform", upload.single("imageimage"), (req, res) => {
     const curpos = req.body.curpos;
     const course = req.body.course;
     const image = req.file.buffer.toString('base64');
-    const sql = "INSERT INTO alumni(name, course, curpos, imaghere) VALUES (?,?,?,?);";
-    db.query(sql, [name, course, curpos, image], (err, result, fields) => {
+    const contact = req.body.contact;
+    const sql = "INSERT INTO alumni(name, course, curpos, imaghere, contact) VALUES (?,?,?,?,?);";
+    db.query(sql, [name, course, curpos, image, contact], (err, result, fields) => {
         if(err) console.log(err);
         else {
             console.log("added alumni to database");

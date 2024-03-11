@@ -11,6 +11,7 @@
         <th class="tablehead thisColor"><strong>Name</strong></th>
         <th class="tablehead thisColor"><strong>Course</strong></th>
         <th class="tablehead thisColor"><strong>Topic</strong></th>
+        <th class="tablehead thisColor"><strong>Contact</strong></th>
       </tr>
     </thead>
     <tbody>
@@ -19,6 +20,7 @@
           <td><%= data[i].id %>. <%= data[i].name %></td>
           <td><%= data[i].course %></td>
           <td><%= data[i].topic %></td>
+          <td><%= data[i].contact %></td>
           <td><img src="data:image/png;base64,<%=data[i].imaghere%>" alt="" width="200"></td>
         </tr>
         <% } %>
