@@ -422,3 +422,11 @@ h4, h3, h2 {
   justify-content: space-between;
 }
 
+.hovereffect {
+  color: black;
+  /* padding: 0.5rem 1rem; */
+}
+
+.hovereffect:hover {
+  color: #645CAA; 
+}
