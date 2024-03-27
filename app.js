@@ -409,67 +409,122 @@ app.get("/reviewarticles", (req, res) => {
 
 // y2006
 app.get("/y2006", (req, res) => {
-    res.render("y2006");
+    const sql = "SELECT * FROM researcharticles WHERE yearyear LIKE '2006%';";
+    db.query(sql, (err, result) => {
+        if (err) console.log(err);
+        else {
+            console.log("successful");
+        }
+        res.render("y2006", { data: result });
+    })
 });
 
 // y2007
 app.get("/y2007", (req, res) => {
-    res.render("y2007");
+    const sql = "SELECT * FROM researcharticles WHERE yearyear LIKE '2007%';";
+    db.query(sql, (err, result) => {
+        if (err) console.log(err);
+        else {
+            console.log("successful");
+        }
+        res.render("y2007", { data: result });
+    })
 });
 
 // y2008
 app.get("/y2008", (req, res) => {
-    res.render("y2008");
+    const sql = "SELECT * FROM researcharticles WHERE yearyear LIKE '2008%';";
+    db.query(sql, (err, result) => {
+        if (err) console.log(err);
+        else {
+            console.log("successful");
+        }
+        res.render("y2008", { data: result });
+    })
 });
 
 // y2009
 app.get("/y2009", (req, res) => {
-    res.render("y2009");
+    const sql = "SELECT * FROM researcharticles WHERE yearyear LIKE '2009%';";
+    db.query(sql, (err, result) => {
+        if (err) console.log(err);
+        else {
+            console.log("successful");
+        }
+        res.render("y2009", { data: result });
+    })
 });
 
 // y2013
 app.get("/y2013", (req, res) => {
-    res.render("y2013");
+    const sql = "SELECT * FROM researcharticles WHERE yearyear LIKE '2013%';";
+    db.query(sql, (err, result) => {
+        if (err) console.log(err);
+        else {
+            console.log("successful");
+        }
+        res.render("y2013", { data: result });
+    })
 });
 
 // y2014
 app.get("/y2014", (req, res) => {
-    res.render("y2014");
+    const sql = "SELECT * FROM researcharticles WHERE yearyear LIKE '2014%';";
+    db.query(sql, (err, result) => {
+        if (err) console.log(err);
+        else {
+            console.log("successful");
+        }
+        res.render("y2014", { data: result });
+    })
 });
 
 // y2015
 app.get("/y2015", (req, res) => {
-    res.render("y2015");
-});
-
-// y2017
-app.get("/y2017", (req, res) => {
-    res.render("y2017");
-});
-
-// y2018
-app.get("/y2018", (req, res) => {
-    res.render("y2018");
+    const sql = "SELECT * FROM researcharticles WHERE yearyear LIKE '2015%';";
+    db.query(sql, (err, result) => {
+        if (err) console.log(err);
+        else {
+            console.log("successful");
+        }
+        res.render("y2015", { data: result });
+    })
 });
 
 // y2019
 app.get("/y2019", (req, res) => {
-    res.render("y2019");
-});
-
-// y2020
-app.get("/y2020", (req, res) => {
-    res.render("y2020");
-});
-
-// y2021
-app.get("/y2021", (req, res) => {
-    res.render("y2021");
+    const sql = "SELECT * FROM researcharticles WHERE yearyear LIKE '2019%';";
+    db.query(sql, (err, result) => {
+        if (err) console.log(err);
+        else {
+            console.log("successful");
+        }
+        res.render("y2019", { data: result });
+    })
 });
 
 // y2022
 app.get("/y2022", (req, res) => {
-    res.render("y2022");
+    const sql = "SELECT * FROM researcharticles WHERE yearyear LIKE '2022%';";
+    db.query(sql, (err, result) => {
+        if (err) console.log(err);
+        else {
+            console.log("successful");
+        }
+        res.render("y2022", { data: result });
+    })
+});
+
+// y2023
+app.get("/y2023", (req, res) => {
+    const sql = "SELECT * FROM researcharticles WHERE yearyear LIKE '2023%';";
+    db.query(sql, (err, result) => {
+        if (err) console.log(err);
+        else {
+            console.log("successful");
+        }
+        res.render("y2023", { data: result });
+    })
 });
 
 // resartform

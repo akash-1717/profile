@@ -430,3 +430,13 @@ h4, h3, h2 {
 .hovereffect:hover {
   color: #645CAA; 
 }
+
+.flexlist1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexlist2 {
+  display: flex;
+  justify-content: space-around;
+}

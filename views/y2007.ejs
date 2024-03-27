@@ -3,141 +3,26 @@
 <div class="container mainPadding myFont1">
 
   <h1>2007</h1>
-  <hr class="divider">
+  <hr class="divider mb-4">
 
   <div class="row mb-2">
+    <% for (let i = data.length-1; i >= 0; i--) { %>
     <div class="col-md-12">
-      <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 thisColor1">December 2007</strong>
-          <h5 class="mb-0 thisColor">Spectroscopic investigations on the mechanism of interaction of bioactive dye with bovine serum albumin</h5>
-          <br>
-          <div class="mb-1 text-muted">SMT Shaikh, J Seetharamappa, PB Kandagal, DH Manjunatha, S Ashoka.</div>
-          <div class="mb-1 text-dark">
-            Dyes and Pigments (ISSN: 0143-7208)<br>
-            2007, 74 (3), 665-671.<br>
-            DOI: 10.1016/j.dyepig.2006.04.010
-          </div>
-          <a class="p-0 hrefTag1" href="https://www.researchgate.net/publication/229117666_Spectroscopic_investigations_on_the_mechanism_of_interaction_of_bioactive_dye_with_bovine_serum_albumin">View more...</a>
+        <div class="row g-0 project border overflow-auto flex-md-row mb-4 shadow-lg position-relative publications">
+            <div class="col p-4 d-flex flex-column position-static">
+                <h5 class="mb-0 thisColor myFont1"><%= data[i].title %></h5>
+                <div class="mb-1 text-muted"><%= data[i].authors %></div>
+                <strong class="d-inline-block mb-2 thisColor1"><%= data[i].journalname %></strong>
+                <strong class="d-inline-block mb-2 thisColor1"><%= data[i].yearyear %></strong>
+                <div class="mb-1 text-dark">
+                    DOI: <u><a class="hrefTag1" href="<%= data[i].doilink %>"><%= data[i].doi %></a></u>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+    <% } %>
   </div>
 
-  <div class="row mb-2">
-    <div class="col-md-12">
-      <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 thisColor1">October 2007</strong>
-          <h5 class="mb-0 thisColor">High-Performance Liquid Chromatographic Determination of Parecoxib in Human Plasma and Pharmaceutical Formulations</h5>
-          <br>
-          <div class="mb-1 text-muted">SMT Shaikh, DH Manjunatha, J Seetharamappa, PB Kandagal.</div>
-          <div class="mb-1 text-dark">
-            Analytical Letters (ISSN: 0003-2719) <br>
-            2007, 40 (15), 2925-2934. <br>
-            DOI: 10.1080/00032710701606267
-          </div>
-          <a class="p-0 hrefTag1" href="https://www.researchgate.net/publication/233665004_High-Performance_Liquid_Chromatographic_Determination_of_Parecoxib_in_Human_Plasma_and_Pharmaceutical_Formulations">View more...</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-2">
-    <div class="col-md-12">
-      <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 thisColor1">June 2007</strong>
-          <h5 class="mb-0 thisColor">Spectroscopic studies on the binding of bioactive phenothiazine compounds to human serum albumin</h5>
-          <br>
-          <div class="mb-1 text-muted">PB Kandagal, SMT Shaikh, DH Manjunatha, J Seetharamappa, BS Nagaralli.</div>
-          <div class="mb-1 text-dark">
-            Journal of Photochemistry and Photobiology A: Chemistry (ISSN: 10106030) <br>
-            2007, 189 (1), 121-127. <br>
-            DOI: 10.1016/j.jphotochem.2007.01.021
-          </div>
-          <a class="p-0 hrefTag1" href="https://www.researchgate.net/publication/223908580_Spectroscopic_studies_on_the_binding_of_bioactive_phenothiazine_compounds_to_human_serum_albumin">View more...</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-2">
-    <div class="col-md-12">
-      <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 thisColor1">July 2007</strong>
-          <h5 class="mb-0 thisColor">In vitro study on the binding of anti-coagulant vitamin to bovine serum albumin and the influence of toxic ions and common ions on binding</h5>
-          <br>
-          <div class="mb-1 text-muted">SMT Shaikh, J Seetharamappa, PB Kandagal, DH Manjunatha.</div>
-          <div class="mb-1 text-dark">
-            International Journal of Biological Macromolecules (ISSN: 01418130) <br>
-            2007, 41 (1), 81-86. <br>
-            DOI: 10.1016/j.ijbiomac.2007.01.004
-          </div>
-          <a class="p-0 hrefTag1" href="https://www.researchgate.net/publication/6502705_In_vitro_study_on_the_binding_of_anti-coagulant_vitamin_to_bovine_serum_albumin_and_the_influence_of_toxic_ions_and_common_ions_on_binding">View more...</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-2">
-    <div class="col-md-12">
-      <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 thisColor1">February 2007</strong>
-          <h5 class="mb-0 thisColor">Determination of Cinnarizine in Pure and Pharmaceutical Formulations</h5>
-          <br>
-          <div class="mb-1 text-muted">MH Devagondanahalli, SMT Shaikh, S Jaldappagari, SK Ramanaboyina, H Kasalanti.</div>
-          <div class="mb-1 text-dark">
-            Journal of the Chinese Chemical Society (ISSN: 2192-6549) <br>
-            2007, 54 (1), 63-68. <br>
-            DOI: 10.1002/jccs.200700011
-          </div>
-          <a class="p-0 hrefTag1" href="https://www.researchgate.net/publication/251570796_Determination_of_Cinnarizine_in_Pure_and_Pharmaceutical_Formulations">View more...</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-2">
-    <div class="col-md-12">
-      <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 thisColor1">January 2007</strong>
-          <h5 class="mb-0 thisColor">Binding of trazodone hydrochloride with human serum albumin: A spectroscopic study</h5>
-          <br>
-          <div class="mb-1 text-muted">PB Kandagal, J Seetharamappa, SMT Shaikh, DH Manjunatha.</div>
-          <div class="mb-1 text-dark">
-            Journal of Photochemistry and Photobiology A: Chemistry (ISSN: 1010-6030) <br>
-            2007, 185 (2), 239-244. <br>
-            DOI: 10.1016/j.jphotochem.2006.06.015
-          </div>
-          <a class="p-0 hrefTag1" href="https://www.researchgate.net/publication/239707047_Binding_of_trazodone_hydrochloride_with_human_serum_albumin_A_spectroscopic_study">View more...</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-2">
-    <div class="col-md-12">
-      <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 thisColor1">January 2007</strong>
-          <h5 class="mb-0 thisColor">Determination of nortriptyline hydrochloride in bulk and pharmaceutical formulations.</h5>
-          <br>
-          <div class="mb-1 text-muted">R Sudhir Kumar, DH Manjunatha, J Seetharamappa, K Harikrishna, SMT Shaikh.</div>
-          <div class="mb-1 text-dark">
-            Chemia analityczna (ISSN: 0009-2223), <br>
-            2007, 52 (2), 337-346. <br>
-            (Now merged with Analytical and Bioanalytical Chemistry – ISSN: 16182642)
-          </div>
-          <a class="p-0 hrefTag1" href="https://www.researchgate.net/publication/251570826_Determination_of_Cinnarizine_in_Pure_and_Pharmaceutical_Formulations">View more...</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  
 </div>
 
 <%- include("partials/footer"); -%>

@@ -3,28 +3,26 @@
 <div class="container mainPadding myFont1">
 
   <h1>2009</h1>
-  <hr class="divider">
+  <hr class="divider mb-4">
 
   <div class="row mb-2">
+    <% for (let i = data.length-1; i >= 0; i--) { %>
     <div class="col-md-12">
-      <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 thisColor1">May 2009</strong>
-          <h5 class="mb-0 thisColor">New extractive spectrophotometric methods for the determination of nortriptyline hydrochloride in pure form and pharmaceutical dosages. </h5>
-          <br>
-          <div class="mb-1 text-muted">DH Manjunatha, J Seetharamappa, PB Kandagal, SS Kalanur</div>
-          <div class="mb-1 text-dark">
-            Journal of Analytical Chemistry (ISSN: 1061-9348) <br>
-            2009, 64 (5), 462-466.
-            <div class="mb-1 text-dark">
-              DOI: <u><a class="hrefTag1 " href="https://rdcu.be/cVtnx">10.1134/S1061934809050062</a></u>
+        <div class="row g-0 project border overflow-auto flex-md-row mb-4 shadow-lg position-relative publications">
+            <div class="col p-4 d-flex flex-column position-static">
+                <h5 class="mb-0 thisColor myFont1"><%= data[i].title %></h5>
+                <div class="mb-1 text-muted"><%= data[i].authors %></div>
+                <strong class="d-inline-block mb-2 thisColor1"><%= data[i].journalname %></strong>
+                <strong class="d-inline-block mb-2 thisColor1"><%= data[i].yearyear %></strong>
+                <div class="mb-1 text-dark">
+                    DOI: <u><a class="hrefTag1" href="<%= data[i].doilink %>"><%= data[i].doi %></a></u>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
+    <% } %>
   </div>
-  
+
 </div>
 
 <%- include("partials/footer"); -%>

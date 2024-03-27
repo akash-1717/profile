@@ -3,28 +3,26 @@
 <div class="container mainPadding myFont1">
 
   <h1>2013</h1>
-  <hr class="divider">
+  <hr class="divider mb-4">
 
   <div class="row mb-2">
+    <% for (let i = data.length-1; i >= 0; i--) { %>
     <div class="col-md-12">
-      <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 thisColor1">April 2013</strong>
-          <h5 class="mb-0 thisColor">A colorimetric aptasensor for the diagnosis of malaria based on cationic polymers and gold nanoparticles</h5>
-          <br>
-          <div class="mb-1 text-muted">W Jeon, S Lee, DH Manjunatha, C Ban</div>
-          <br>
-          <div class="mb-1 text-dark">
-            Analytical Biochemistry (ISSN; 00032697) <br>
-            2013, 439 (1), 11-16. <br>
-            DOI: 10.1016/j.ab.2013.03.032
-          </div>
-          <a class="hrefTag1" href="files/calorimetricaptatensor.pdf" download><u>Download full-text PDF</u></a>
+        <div class="row g-0 project border overflow-auto flex-md-row mb-4 shadow-lg position-relative publications">
+            <div class="col p-4 d-flex flex-column position-static">
+                <h5 class="mb-0 thisColor myFont1"><%= data[i].title %></h5>
+                <div class="mb-1 text-muted"><%= data[i].authors %></div>
+                <strong class="d-inline-block mb-2 thisColor1"><%= data[i].journalname %></strong>
+                <strong class="d-inline-block mb-2 thisColor1"><%= data[i].yearyear %></strong>
+                <div class="mb-1 text-dark">
+                    DOI: <u><a class="hrefTag1" href="<%= data[i].doilink %>"><%= data[i].doi %></a></u>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+    <% } %>
   </div>
-  
+
 </div>
 
 <%- include("partials/footer"); -%>

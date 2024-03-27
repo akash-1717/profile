@@ -3,29 +3,26 @@
 <div class="container mainPadding myFont1">
 
   <h1>2014</h1>
-  <hr class="divider">
+  <hr class="divider mb-4">
 
   <div class="row mb-2">
+    <% for (let i = data.length-1; i >= 0; i--) { %>
     <div class="col-md-12">
-      <div class="row g-0 project  border overflow-auto flex-md-row mb-4  shadow-lg position-relative publications">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 thisColor1">December 2014</strong>
-          <h5 class="mb-0 thisColor">The anti-inflammatory and wound healing properties of honey</h5>
-          <br>
-          <div class="mb-1 text-muted">Dr. Manjunatha D H, Lee Suan Chua</div>
-          <div class="mb-1 text-dark">
-            Europen Food Research and Technology (ISSN: 1438-2377) <br>
-            2014, 239(6), 1003–1014. <br>
-            <div class="mb-1 text-dark">
-              DOI: <u><a class="hrefTag1 " href="https://rdcu.be/cVtof">10.1007/s00217-014-2297-6</a></u>
+        <div class="row g-0 project border overflow-auto flex-md-row mb-4 shadow-lg position-relative publications">
+            <div class="col p-4 d-flex flex-column position-static">
+                <h5 class="mb-0 thisColor myFont1"><%= data[i].title %></h5>
+                <div class="mb-1 text-muted"><%= data[i].authors %></div>
+                <strong class="d-inline-block mb-2 thisColor1"><%= data[i].journalname %></strong>
+                <strong class="d-inline-block mb-2 thisColor1"><%= data[i].yearyear %></strong>
+                <div class="mb-1 text-dark">
+                    DOI: <u><a class="hrefTag1" href="<%= data[i].doilink %>"><%= data[i].doi %></a></u>
+                </div>
             </div>
-          </div>
-          <a class="p-0 hrefTag1" href="https://www.researchgate.net/publication/271935464_The_anti-inflammatory_and_wound_healing_properties_of_honey">View more...</a>
         </div>
-      </div>
     </div>
+    <% } %>
   </div>
-  
+
 </div>
 
 <%- include("partials/footer"); -%>
