@@ -1,19 +1,10 @@
 <%- include("partials/header"); -%>
 <div class="container mainPadding">
 
-
-
-
-
-
-    <div class="p-4 p-md-5 mb-4 rounded text-bg myColor flexflexdisp">
-
-
-
-
-
-        <div class="col-md-8 px-0">
-            <h1 class="display-6 text-white fst-italic leftAlign"><u>Dr. Manjunatha D. H</u></h1>
+    <div class="container responsiveness">
+        <div class="row pl-2rem">
+          <div class="col-md-8">
+            <h1 class="display-6 text-white fst-italic"><u>Dr. Manjunatha D H</u></h1>
             <h5 class="text-white fst-italic">Ph.D</h5>
             <p class="lead my-3 text-white">
                 Teaching and research in Chemistry is my prime foci, but also expect to contribute to the
@@ -22,23 +13,24 @@
             <p class="lead my-3 text-white">
                 PhD in 2008, at Karnatak University, Dharwad, India, in the field of Analytical Chemistry. Later Joined Apotex Pharmachem India Pvt Ltd., Bangalore, a pharma company and worked in A R&D section for 3 years. Later went to South Korea in 2012 for Postdoc studies at POSTECH, for one year. And then to IBD, UTM, Malaysia for another Postdoc. Worked as Assistant Professor in Chemistry, MS Ramaiah Institute of Technology, Bangalore. Currently working as Assistant Professor in the Department of Chemistry, Davangere University, Davangere.
             </p>
+          </div>
+          <div class="col-md-4">
+            <div class="image-container forimage">
+              <img id="profileImage" src="data:image/png;base64,<%=data.imaghere%>" alt="profile picture" class="img-fluid" width="300">
+            </div>
+          </div>
         </div>
+      </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var profileImage = document.getElementById('profileImage');
+          if (profileImage) {
+            var shape = '<%=data.shape%>';
+            profileImage.style.borderRadius = shape === 'circle' ? '50%' : '0%';
+          }
+        });
+      </script>
 
-        <div class="image-container">
-            <img id="profileImage" src="data:image/png;base64,<%=data.imaghere%>" alt="profile picture" width="300">
-        </div>
-    
-       
-        <script>
-        <% if (data.shape === "circle") { %>
-            document.getElementById('profileImage').style.borderRadius = '50%';
-        <% } else { %>
-            document.getElementById('profileImage').style.borderRadius = '0%';
-        <% } %>
-        </script>
-
-
-    </div>
 </div>
 
 
