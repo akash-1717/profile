@@ -65,118 +65,6 @@
   }(document, 'script', 'facebook-jssdk'));
 </script>
 
-
-
-
-
- <!-- <div class=" shadow-sm">
-  <header class="container-fluid pt-3 shadow-sm mainColor myFixedHeader ">
-    <div class="container-fluid d-grid gap-3 border-bottom pb-2 align-items-center" style="grid-template-columns: 1fr 2fr;">
-      <div class="flex-shrink-0 dropdown">
-        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-          <img src="images/akash-1717.png" alt="akash-1717" width="32" height="32" class="rounded-circle">&nbsp;&nbsp;
-          <text class="hrefTag1">Contact the developer</text>
-        </a>
-        <ul class="dropdown-menu text-small shadow">
-          <li><a class="dropdown-item" href="tel:+916363750120" aria-current="page">Call</a></li>
-          <li><a class="dropdown-item" href="mailto:akashpersetti17@gmail.com">Email</a></li>
-          <li><a class="dropdown-item" href="https://wa.me/+916363750120?text=Hello%20Akash,%20I'm%20contacting%20you%20through%20manjunath's%20personal%20website">WhatsApp</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="pb-0 mt-2 stickyPos">
-      <nav class="nav d-flex justify-content-between position-sticky">
-        <form action="/" method="get"> 
-          <button type="submit" class="hrefTag1 mynav">
-            Home
-          </button>
-        </form>
-        <a class="hrefTag1 pb-2" href="#about">About</a>
-        <form action="/experience" method="get"> 
-          <button type="submit" class="hrefTag1 mynav">
-            Experience
-          </button>
-        </form>
-        <form action="/awards" method="get"> 
-          <button type="submit" class="hrefTag1 mynav">
-            Awards
-          </button>
-        </form> 
-        <form action="/groupmembers" method="get"> 
-          <button type="submit" class="hrefTag1 mynav">
-            Group members
-          </button>
-        </form> 
-        <div class="flex-shrink-0 dropend"><a class="pb-2 d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" href="#"><text class="hrefTag1">Publications</text></a>  
-          <ul class="dropdown-menu text-small shadow">
-            <li>
-              <form action="/patents" method="get"> 
-                <button type="submit" class="dropdown-item mynav1">
-                  Patents
-                </button>
-              </form>
-            </li>
-            <li>
-              <form action="/researcharticles" method="get"> 
-                <button type="submit" class="dropdown-item mynav1">
-                  Research articles
-                </button>
-              </form>
-            </li>
-            <li>
-              <form action="/reviewarticles" method="get"> 
-                <button type="submit" class="dropdown-item mynav1">
-                  Review articles
-                </button>
-              </form>
-            </li>
-            <li>
-              <form action="/books" method="get"> 
-                <button type="submit" class="dropdown-item mynav1">
-                  Books
-                </button>
-              </form>
-            </li>
-            <li>
-              <form action="/bookchapters" method="get"> 
-                <button type="submit" class="dropdown-item mynav1">
-                  Book chapters
-                </button>
-              </form>
-            </li>
-          </ul>
-        </div>
-        <form action="/invitedtalks" method="get"> 
-          <button type="submit" class="hrefTag1 mynav">
-            Invited Talks
-          </button>
-        </form>
-        <form action="/membership" method="get"> 
-          <button type="submit" class="hrefTag1 mynav">
-            Membership
-          </button>
-        </form>
-        <form action="/researchprojects" method="get"> 
-          <button type="submit" class="hrefTag1 mynav">
-            Research projects
-          </button>
-        </form>
-        <form action="/conferences" method="get"> 
-          <button type="submit" class="hrefTag1 mynav">
-            Conferences/symposium
-          </button>
-        </form>
-        <form action="/alumni" method="get"> 
-          <button type="submit" class="hrefTag1 mynav">
-            Alumni
-          </button>
-        </form>
-      </nav>
-    </div>
-</header>
-  
-</div> -->
-
 <div>
   
 <nav class="navbar navbar-expand-lg d-flex navbar-light bg-light fixed-top" style="flex-direction: column;">
@@ -241,7 +129,7 @@
           <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <span class="hovereffect">Publications</span>
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu mobileview" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="/patents">Patents</a></li>
             <li><a class="dropdown-item" href="/researcharticles">Research Articles</a></li>
             <li><a class="dropdown-item" href="/reviewarticles">Review Articles</a></li>
@@ -286,3 +174,14 @@
   </div>
 </nav>
 </div>
+
+<script>
+  window.addEventListener('resize', function() {
+    var element = document.querySelector('.mobileview');
+    if (window.innerWidth <= 991.98) {
+      element.style.position = 'static';
+    } else {
+      element.style.position = 'absolute';
+    }
+  });
+</script>
